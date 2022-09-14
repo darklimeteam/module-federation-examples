@@ -1,0 +1,12 @@
+{
+  "name": "mdmf-shared",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "14.2.1",
+    "@angular/core": "14.2.1",
+    "@ngxs/store": "3.7.5"
+  },
+  "dependencies": {
+    "tslib": "2.4.0"
+  }
+}
