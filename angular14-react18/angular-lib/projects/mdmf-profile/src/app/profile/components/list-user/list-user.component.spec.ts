@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxsModule } from '@ngxs/store';
 import { ProfileComponent } from 'projects/mdmf-profile/src/app/profile/components/profile/profile.component';
-import { User } from 'projects/mdmf-shared/src/lib/app-state/models/User';
 import { UserState } from 'projects/mdmf-shared/src/lib/app-state/state/user.state';
 import { MdmfSharedModule } from 'projects/mdmf-shared/src/lib/modules/mdmf-shared.module';
 import { ListUserComponent } from './list-user.component';
+import { IUser } from '../../../../../../dist/mdmf-shared';
 
 describe('ListUserShellComponent', () => {
   let component: ListUserComponent;
@@ -39,7 +39,7 @@ describe('ListUserShellComponent', () => {
   });
 
   it('should remove an User from the store', () => {
-    const user: User = { name: 'Mr. A', email: 'a@company.com' };
+    const user: IUser = { name: 'Mr. A', email: 'a@company.com' };
 
     // add User into the store
     const profileComponent = TestBed.createComponent(ProfileComponent).componentInstance;

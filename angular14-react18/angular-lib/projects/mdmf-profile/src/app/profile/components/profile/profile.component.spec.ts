@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxsModule, Store } from '@ngxs/store';
-import { User } from 'projects/mdmf-shared/src/lib/app-state/models/User';
 import { UserState } from 'projects/mdmf-shared/src/lib/app-state/state/user.state';
 import { MdmfSharedModule } from 'projects/mdmf-shared/src/lib/modules/mdmf-shared.module';
 import { ProfileComponent } from './profile.component';
+import { IUser } from '../../../../../../dist/mdmf-shared';
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -38,9 +38,9 @@ describe('ProfileComponent', () => {
   });
 
   it('should add an User into the store', () => {
-    const user: User = { name: 'Mr. A', email: 'a@company.com' };
+    const user: IUser = { name: 'Mr. A', email: 'a@company.com' };
     component.addUser(user.name, user.email);
-    const users: User[] = component.getUsers();
+    const users: IUser[] = component.getUsers();
     expect(users.filter(u => u.name === user.name && u.email === user.email)[0]).toEqual(user);
   });
 });
