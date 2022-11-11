@@ -11,8 +11,8 @@ const containerElementName = 'customReactComponentContainer';
   selector: 'app-list-user',
   template: ` <h2 style="color: cadetblue">User List (React Microfrontend)</h2>
     <div style="font-family: Inter, sans-serif; color: rgb(140, 137, 137, 1); font-size: 13px">
-      This user list component is being remotely loaded into the application using Module Federation
-      from React App
+      This user list component is being remotely loaded into the application from React App using
+      Webpack Module Federation
     </div>
     <span #${containerElementName}></span>`,
   encapsulation: ViewEncapsulation.None,
